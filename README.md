@@ -26,6 +26,7 @@ classes used
     king = 13
 
  person:
+ 
     playing game
     guesses y or no
     compares cards
