@@ -16,19 +16,20 @@ HiLo Card Game
 
 classes used
 
-Deck:
-    building the deck
-        4 card suites
-        ace = 1
-        jack = 11
-        queen = 12
-        king = 13
+ Deck:
 
-person
+    building the deck
+    4 card suites
+    ace = 1
+    jack = 11
+    queen = 12
+    king = 13
+
+ person:
     playing game
     guesses y or no
     compares cards
     scores points
 
-cards
+ cards: 
     
