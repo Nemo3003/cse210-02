@@ -1,5 +1,5 @@
 '''
-Authors: Dan Allred,
+Authors: Dan Allred, ","
 Edit 1/22/2022 10:08am EST. - DA - original commit
 Edit 1/22/2022 3:00pm EST. - GO - Class comments
 '''
@@ -31,7 +31,7 @@ class Deck(object):
 
     def build(self):
         for suit in ["Spades", "Clubs", "Diamonds", "Hearts"]:
-            for value in ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]:  #Ace, Jack, queen and King need comparible. or we could just name them 1, 11, 12, 13
+            for value in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]:  #Ace, Jack, queen and King need comparible. or we could just name them 1, 11, 12, 13
                 self.cards.append(Card(suit, value))
 
     def show(self):
