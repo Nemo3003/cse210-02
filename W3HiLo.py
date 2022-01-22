@@ -1,9 +1,12 @@
 '''
 Authors: Dan Allred,
 Edit 1/22/2022 10:08am EST. - DA - original commit
+Edit 1/22/2022 3:00pm EST. - GO - Class comments
 '''
 
 import random
+# To create a python class, use the keyword 'class'
+# Use the __init__() function to assign values to object properties
 
 class Card(object):
     def __init__(self, suit, value):
