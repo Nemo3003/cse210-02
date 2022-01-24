@@ -93,7 +93,7 @@ nextCard = newcard.draw(deck)
 
 
 
-play = input("Do you want to play High/Low? Y or N? ")
+play = input("Do you want to play? Y or N? ")
 while play.lower()== "y":
     card = playerHand
     print("The current card is: ", str(card.show()))
