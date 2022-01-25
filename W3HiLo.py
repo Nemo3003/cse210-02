@@ -5,6 +5,7 @@ Edit 1/22/2022 3:00pm EST. - GO - Class comments
 '''
 
 import random
+from typing import Counter
 # To create a python class, use the keyword 'class'
 # Use the __init__() function to assign values to object properties
 
@@ -23,6 +24,7 @@ class Card(object):
 
     def show(self):
         print ("{} of {}".format(self.value, self.suit))
+
 
 class Deck(object):
     def __init__(self):
@@ -90,19 +92,19 @@ playerHand = human.draw(deck)
 
 newcard = NextCard()
 nextCard = newcard.draw(deck)
-#The first value for the score is 100
-score = 100
+#The first value for the score is 300
+score = 300
 
 play = input("Do you want to play? Y or N? ")
 while play.lower()== "y":
     card = playerHand
-    print("The current card is: ", str(card.show()))
+    print("The current card is: ", (card.show()))
     guess = input("Guess H for high or L for low: " )
     if guess.lower()=="h":
         if card > nextCard:
             print(f"correct! The the card is {card.show()}")
             score += 100
-            adding = counter.append(score)
+            # adding = Counter.append(score)
             print(f"Your points are {score}")
             play = input("Play again? Y or N? ")
 
