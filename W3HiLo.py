@@ -98,30 +98,46 @@ score = 300
 play = input("Do you want to play? Y or N? ")
 while play.lower()== "y":
     card = playerHand
-    print("The current card is: ", (card.show()))
+    print("\nThe current card is: ", (card.show()))
     guess = input("Guess H for high or L for low: " )
     if guess.lower()=="h":
         if card > nextCard:
-            print(f"correct! The the card is {card.show()}")
+            print(f"\nCorrect! The the card is {card.show()}")
             score += 100
             # adding = Counter.append(score)
             print(f"Your points are {score}")
-            play = input("Play again? Y or N? ")
+            play_ag = input("Play again? Y or N? ")
+            if play_ag.lower()=="n":
+                print("Thanks for playing, hope you enjoyed!")
+                break
 
         if card < nextCard:
-            print(f"You lost! The card was {nextCard.show()}")
+            print(f"\nYou lost! The card was {nextCard.show()}")
             score -= 75
             print(f"Your points are {score}")
-            play = input("Play again? Y or N? ")
+            play_ag = input("Play again? Y or N? ")
+            if play_ag.lower()=="n":
+                print("Thanks for playing, hope you enjoyed!")
+                break
 
     if guess.lower()=="l":
         if card > nextCard:
-            print(f"You lost! card was {nextCard.show()}")
+            print(f"\nYou lost! card was {nextCard.show()}")
             score -= 75
             print(f"Your points are {score}")
-            play = input("Play again? Y or N? ")
+            play_ag = input("Play again? Y or N? ")
+            if play_ag.lower()=="n":
+                print("Thanks for playing, hope you enjoyed!")
+                break
 
         if card < nextCard:
-            print(f"correct! The the card is {nextCard.show()}")
+            print(f"\nCorrect! The the card is {nextCard.show()}")
             score += 100
             print(f"Your points are {score}")
+            play_ag = input("Play again? Y or N? ")
+            if play_ag.lower()=="n":
+                print("Thanks for playing, hope you enjoyed!")
+                break
+    
+else:
+    print("Thanks for playing!")
