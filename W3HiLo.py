@@ -95,24 +95,32 @@ nextCard = newcard.draw(deck)
 
 play = input("Do you want to play? Y or N? ")
 while play.lower()== "y":
+    score = 0
     card = playerHand
     print("The current card is: ", str(card.show()))
-    guess = input("Guess H for high or L for low." )
+    guess = input("Guess H for high or L for low: " )
     if guess.lower()=="h":
         if card > nextCard:
             print(f"correct! The the card is {card.show()}")
+            score += 100
+            adding = counter.append(score)
+            print(f"Your points are {score}")
             play = input("Play again? Y or N? ")
 
         if card < nextCard:
             print(f"You lost! The card was {nextCard.show()}")
+            score -= 75
+            print(f"Your points are {score}")
             play = input("Play again? Y or N? ")
 
     if guess.lower()=="l":
         if card > nextCard:
             print(f"You lost! card was {nextCard.show()}")
+            score -= 75
+            print(f"Your points are {score}")
             play = input("Play again? Y or N? ")
 
         if card < nextCard:
             print(f"correct! The the card is {nextCard.show()}")
-else:
-    print("The game is over.")
+            score += 100
+            print(f"Your points are {score}")
