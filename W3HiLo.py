@@ -8,7 +8,7 @@ import random
 # To create a python class, use the keyword 'class'
 # Use the __init__() function to assign values to object properties
 
-class Card(object):
+class card(object):
     def __init__(self, suit, value):
         self.suit = suit
         self.value = value
@@ -24,7 +24,7 @@ class Card(object):
     def show(self):
         print ("{} of {}".format(self.value, self.suit))
 
-class Deck(object):
+class deck(object):
     def __init__(self):
         self.cards = []
         self.build()
@@ -32,7 +32,7 @@ class Deck(object):
     def build(self):
         for suit in ["Spades", "Clubs", "Diamonds", "Hearts"]:
             for value in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]:  #Ace, Jack, queen and King need comparible. or we could just name them 1, 11, 12, 13
-                self.cards.append(Card(suit, value))
+                self.cards.append(card(suit, value))
 
     def show(self):
         for card in self.cards:
@@ -43,10 +43,10 @@ class Deck(object):
             r = random.randint(0, n)
             self.cards[n], self.cards[r] = self.cards[r], self.cards[n]
 
-    def drawCard(self):
+    def drawcard(self):
         return self.cards.pop()
 
-class Person(object):
+class person(object):
     def __init__(self):
         self.hand = []
 
@@ -61,14 +61,14 @@ class Person(object):
         return result
 
     def draw(self, deck):
-        self.hand.append(deck.drawCard())
+        self.hand.append(deck.drawcard())
         return self
 
     def show(self):
         for card in self.hand:
             card.show()
 
-class NextCard(object):
+class nextCard(object):
     def __init__(self):
         self.nextcard = []
 
@@ -82,13 +82,13 @@ class NextCard(object):
 
 
 
-deck = Deck()
+deck = deck()
 deck.shuffle()
 
-human = Person()
+human = person()
 playerHand = human.draw(deck)
 
-newcard = NextCard()
+newcard = nextCard()
 nextCard = newcard.draw(deck)
 #The first value for the score is 100
 score = 100
