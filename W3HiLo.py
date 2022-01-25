@@ -1,5 +1,5 @@
 '''
-Authors: Dan Allred, ","
+Authors: Dan Allred, Ulises Mariano Melgarejo","
 Edit 1/22/2022 10:08am EST. - DA - original commit
 Edit 1/22/2022 3:00pm EST. - GO - Class comments
 '''
@@ -90,12 +90,11 @@ playerHand = human.draw(deck)
 
 newcard = NextCard()
 nextCard = newcard.draw(deck)
-
-
+#The first value for the score is 100
+score = 100
 
 play = input("Do you want to play? Y or N? ")
 while play.lower()== "y":
-    score = 0
     card = playerHand
     print("The current card is: ", str(card.show()))
     guess = input("Guess H for high or L for low: " )
