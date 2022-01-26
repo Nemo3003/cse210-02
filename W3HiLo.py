@@ -106,15 +106,22 @@ while play.lower()== "y":
             score += 100
             # adding = Counter.append(score)
             print(f"Your points are {score}")
+            if score == 0 or score < 0:
+                print("You lost all your points, you lose!")
+                break
             play_ag = input("Play again? Y or N? ")
             if play_ag.lower()=="n":
                 print("Thanks for playing, hope you enjoyed!")
                 break
+            
 
         if card < nextCard:
             print(f"\nYou lost! The card was {nextCard.show()}")
             score -= 75
             print(f"Your points are {score}")
+            if score == 0 or score < 0:
+                print("You lost all your points, you lose!")
+                break
             play_ag = input("Play again? Y or N? ")
             if play_ag.lower()=="n":
                 print("Thanks for playing, hope you enjoyed!")
@@ -125,6 +132,9 @@ while play.lower()== "y":
             print(f"\nYou lost! card was {nextCard.show()}")
             score -= 75
             print(f"Your points are {score}")
+            if score == 0 or score < 0:
+                print("You lost all your points, you lose!")
+                break
             play_ag = input("Play again? Y or N? ")
             if play_ag.lower()=="n":
                 print("Thanks for playing, hope you enjoyed!")
@@ -134,10 +144,13 @@ while play.lower()== "y":
             print(f"\nCorrect! The the card is {nextCard.show()}")
             score += 100
             print(f"Your points are {score}")
+            if score == 0 or score < 0:
+                print("You lost all your points, you lose!")
+                break
             play_ag = input("Play again? Y or N? ")
             if play_ag.lower()=="n":
                 print("Thanks for playing, hope you enjoyed!")
                 break
-    
+
 else:
     print("Thanks for playing!")
