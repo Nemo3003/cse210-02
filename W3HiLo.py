@@ -109,10 +109,12 @@ while play.lower()== "y":
             if score == 0 or score < 0:
                 print("You lost all your points, you lose!")
                 break
-            play_ag = input("Play again? Y or N? ")
-            if play_ag.lower()=="n":
-                print("Thanks for playing, hope you enjoyed!")
-                break
+            elif score > 0:
+                play_ag = input("Play again? Y or N? ")
+                if play_ag.lower()=="n":
+                    print("Thanks for playing, hope you enjoyed!")
+                    break
+            
             
 
         if card < nextCard:
@@ -122,10 +124,12 @@ while play.lower()== "y":
             if score == 0 or score < 0:
                 print("You lost all your points, you lose!")
                 break
-            play_ag = input("Play again? Y or N? ")
-            if play_ag.lower()=="n":
-                print("Thanks for playing, hope you enjoyed!")
-                break
+            elif score > 0:
+                play_ag = input("Play again? Y or N? ")
+                if play_ag.lower()=="n":
+                    print("Thanks for playing, hope you enjoyed!")
+                    break
+            
 
     if guess.lower()=="l":
         if card > nextCard:
@@ -135,10 +139,12 @@ while play.lower()== "y":
             if score == 0 or score < 0:
                 print("You lost all your points, you lose!")
                 break
-            play_ag = input("Play again? Y or N? ")
-            if play_ag.lower()=="n":
-                print("Thanks for playing, hope you enjoyed!")
-                break
+            elif score > 0:
+                play_ag = input("Play again? Y or N? ")
+                if play_ag.lower()=="n":
+                    print("Thanks for playing, hope you enjoyed!")
+                    break
+            
 
         if card < nextCard:
             print(f"\nCorrect! The the card is {nextCard.show()}")
@@ -147,10 +153,12 @@ while play.lower()== "y":
             if score == 0 or score < 0:
                 print("You lost all your points, you lose!")
                 break
-            play_ag = input("Play again? Y or N? ")
-            if play_ag.lower()=="n":
-                print("Thanks for playing, hope you enjoyed!")
-                break
+            elif score > 0:
+                play_ag = input("Play again? Y or N? ")
+                if play_ag.lower()=="n":
+                    print("Thanks for playing, hope you enjoyed!")
+                    break
+            
 
 else:
     print("Thanks for playing!")
