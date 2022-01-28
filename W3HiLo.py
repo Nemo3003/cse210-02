@@ -8,7 +8,6 @@ import random
 from typing import Counter
 # To create a python class, use the keyword 'class'
 # Use the __init__() function to assign values to object properties
-
 class Card(object):
     def __init__(self, suit, value):
         self.suit = suit
@@ -89,7 +88,6 @@ deck.shuffle()
 
 human = Person()
 playerHand = human.draw(deck)
-
 newcard = NextCard()
 nextCard = newcard.draw(deck)
 #The first value for the score is 300
@@ -103,7 +101,7 @@ while play.lower()== "y":
     guess = input("Guess H for high or L for low: " )
     if guess.lower()=="h":
         if card > nextCards:
-            print(f"\nCorrect! The the card is {card}")
+            print(f"\nCorrect! The the card is {nextCards}")
             score += 100
             # adding = Counter.append(score)
             print(f"Your points are {score}")
@@ -118,7 +116,7 @@ while play.lower()== "y":
 
 
         if card < nextCards:
-            print(f"\nYou lost! The card was {card}")
+            print(f"\nYou lost! The card was {nextCards}")
             score -= 75
             print(f"Your points are {score}")
             if score == 0 or score < 0:
