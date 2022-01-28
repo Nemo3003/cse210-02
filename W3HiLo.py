@@ -96,11 +96,9 @@ nextCard = newcard.draw(deck)
 score = 300
 card = random.randint(1,13)
 nextCards = random.randint(1,13)
-
+#TODO: To use at least one class.
 play = input("Do you want to play? Y or N? ")
 while play.lower()== "y":
-    
-    
     print("\nThe current card is: ", (card))
     guess = input("Guess H for high or L for low: " )
     if guess.lower()=="h":
