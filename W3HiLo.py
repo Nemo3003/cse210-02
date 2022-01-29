@@ -7,9 +7,6 @@ Edit 1/22/2022 3:00pm EST. - GO - Class comments
 import random
 from typing import Counter
 
-
-
-
 class Game:
 
     #TODO: To use at least one class.
@@ -19,11 +16,19 @@ class Game:
             card = random.randint(1,13)
             nextCards = random.randint(1,13)
             score = 300
-        
+
             play = input("Do you want to play? Y or N? ")
+            if play.lower() != "y" and play.lower() != "n":
+                play = input("Do you want to play? Y or N? ")
+            if play.lower() !="y":
+                print("Only use 'y' or 'n', try again.")
+
             while play.lower()== "y":
                 print("\nThe current card is: ", (card))
                 guess = input("Guess H for high or L for low: " )
+                if guess.lower() != "h" and guess.lower() != "l":
+                    print("Invalid guess. Please try again.")
+                    continue
                 if guess.lower()=="h":
                     if card < nextCards:
                         print(f"\nCorrect! The the card is {nextCards}")
@@ -81,7 +86,6 @@ class Game:
                             if play_ag.lower()=="n":
                                 print("Thanks for playing, hope you enjoyed!")
                                 break
-
             else:
                 print("Thanks for playing!")
         except ValueError:
