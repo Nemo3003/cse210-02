@@ -72,7 +72,7 @@ class Game:
 
                 if guess.lower()=="l":
                     nextCards_2 = random.randint(1,13)
-                    if card_random < nextCards:
+                    if card_random < nextCards_2:
                         score -= 75
                         print(f"\nYou lost! card was {nextCards_2}")
                         print(f"Your points are {score}")
@@ -85,7 +85,7 @@ class Game:
                                 print("Thanks for playing, hope you enjoyed!")
                                 break
                     nextCards_3 = random.randint(1,13)
-                    if card_random > nextCards:
+                    if card_random > nextCards_3:
                         score += 100
                         print(f"\nCorrect! The the card is {nextCards_3}")
                         print(f"Your points are {score}")
